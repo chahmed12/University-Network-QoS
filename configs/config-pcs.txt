@@ -1,0 +1,17 @@
+! PC dans VLAN Académique
+PC0> ip 192.168.20.10 255.255.255.0 192.168.20.1
+
+! PC dans VLAN Admin
+PC1> ip 192.168.30.10 255.255.255.0 192.168.30.1
+
+! PC dans VLAN Public
+PC2> ip 192.168.4.10 255.255.255.0 192.168.4.1
+
+! Serveur Kedux (VLAN 50)
+Server3> ip 192.168.50.10 255.255.255.0 192.168.50.1
+
+! Serveur Gmail (VLAN 50)
+Server4> ip 192.168.50.11 255.255.255.0 192.168.50.1
+
+! Serveur Classroom (VLAN 50)
+Server5> ip 192.168.50.12 255.255.255.0 192.168.50.1

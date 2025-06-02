@@ -1,0 +1,39 @@
+Switch (2960-24TT)
+conf t
+
+vlan 20
+ name Academique
+vlan 30
+ name Admin
+vlan 4
+ name Public
+vlan 50
+ name Serveurs
+
+! Ports accès pour chaque VLAN (adapter selon ta topologie)
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+
+interface FastEthernet0/3
+ switchport mode access
+ switchport access vlan 30
+
+interface FastEthernet0/4
+ switchport mode access
+ switchport access vlan 40
+
+interface FastEthernet0/5
+ switchport mode access
+ switchport access vlan 50
+
+! Trunk vers le routeur
+interface FastEthernet0/1
+ switchport mode trunk
+
+! Sécurisation des ports inutilisés
+interface range FastEthernet0/8 - 24
+ shutdown
+
+end
+write memory
